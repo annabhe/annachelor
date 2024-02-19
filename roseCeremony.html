@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="roseCeremony.css">
+        <title>Rose Ceremony</title>
+    </head>
+    <body>
+        <nav>
+            <h2>Welcome to this week's Rose Ceremony</h2>
+            <h4 id="weekCounter">Week: </h4>
+        </nav>
+        <section id="contestantResults">
+            <h1>Contestant Results</h1>
+            <h4 class="tableCaption"></h4>
+            <table id="contestantsStay"></table>
+            <br>
+            <h4 class="tableCaption"></h4>
+            <table id="contestantsLeave"></table>
+        </section>
+        <div class="modal" id="modal">
+            <div class="modal-content" class="modal-cntent">
+                <div class="msgButton">
+                    <p id="popUpMsg"></p>
+                    <button id="continueButton" type="button">Continue</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <section class="buttonBox">
+            <button id="nextWeekButton" type="button">Continue to Next Week</button>
+        </section>
+        <script src="roseCeremony.js"></script>
+    </body>
+</html>

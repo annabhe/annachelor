@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="playerInit.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="require.js"></script>
+        <script src="playerInit.js"></script>
+        <title>Starting Menu</title>
+    </head>
+    <body>
+        <section>
+            <form id="playerInitForm">
+                <label for="playerName">Hi I'm...</label>
+                <input type="text" id="playerName" placeholder="Enter Your Name!"><br>
+                <h4 id="leadPrompt">And I'm here for...</h4>
+                <section id="whichLead">
+                    <div class="leadButton">
+                        <label for="bachelor">The Bachelor!
+                            <input type="radio" name="whichLead" id="bachelor" value="bachelor">
+                            <img class="imageBox" id="bachelorImg" src="./img/anna_bachelor.jpg">
+                        </label>
+                    </div>
+                    <div>
+                        OR
+                    </div>
+                    <div class="leadButton">
+                        <label for="bachelorette">The Bachelorette!
+                            <input type="radio" name="whichLead" id="bachelorette" value="bachelorette">
+                            <img class="imageBox" id="bacheloretteImg" src="./img/anna_bachelorette.jpg">
+                        </label>
+                    </div>
+                </section>
+            </form>
+            <br>
+            <section class="buttonBox">
+                <button id="playerInitFormButton", type="button" form="playerInitForm">Start your Love Journey</button>
+            </section>
+            <section class="buttonBox">
+                <button id="howToButton">How To Play</button>
+                <button id="meetNPCs">Meet the lead and contestants</button>
+            </section>
+        </section>
+    </body>
+</html>

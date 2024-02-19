@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="loseWinScreen.css">
+        <title>Sorry...</title>
+    </head>
+    <body>
+        <section id="imageBox">
+            <img id="dateImg" src="./img/anna_reject.jpeg" alt="Main Lead crying over pizza and no rose">
+        </section>
+        <br>
+        <div id="gameBox">
+            <section id="dialogueBox">
+                <p id="dialogueText">
+                    I'm sorry... but, I can't give this rose to you. It was nice meeting you. Goodbye
+                </p>
+            </section>
+            <div class="modal" id="modal">
+                <section class=modal-content id="finalMessage"> 
+                    <h3> You have been Eliminated! </h3>
+                    <button id="restartButton" type="button">Replay</button>
+                </section>
+            </div>
+        </div>
+        <script>
+            document.getElementById("restartButton").addEventListener("click", ()=> {
+                window.local.href="./playerInit.html";
+            })
+            let modal = document.getElementById("modal");
+            setTimeout(()=>{modal.style.display = "black";}, 1500)
+        </script>
+    </body>
+</html>

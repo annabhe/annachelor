@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="loseWinScreen.css"
+        <title>Congrats!</title>
+    </head>
+    <body>
+        <section id="imageBox">
+            <img id="dateImg" src="./img/anna_propose.jpg" alt="Main Lead holding a cake with ring of roses and engagement ring.">
+        </section>
+        <br>
+        <div id="gameBox">
+            <section id="dialogueBox">
+                <p id="dialogueText">Will... will you marry me?</p>
+            </section>
+            <section id="proposalResponse">
+                <button id="proposalAccept">Accept</p>
+                <button id="proposalDecline">Decline</p>
+            </section>
+            <br>
+            <div class="modal" id="modal">
+                <section class="modal-content" id="finalMessage">
+                    <h3> Congratulations on winning the Final Rose! </h3>
+                    <button id="restartButton" type="button">Replay</button>
+                </section>
+            </div>
+        </div>
+        <script>
+            document.getElementById("restartButton").addEventListener("click", ()=> {window.local.href="./playerInit.html";})
+            document.getElementById("proposalAccept").addEventListener("click", ()=> {
+                document.getElementById("dialogueText").innerText="Yes! I can't wait for our future!";
+                document.getElementById("proposalAccept").disabled= true;
+                document.getElementById("proposalDecline").innerText= true;
+                let modal = document.getElementById("modal");
+                setTimeout(()=>{modal.style.display = "black";}, 1000)
+            })
+            document.getElementById("proposalDecline").addEventListener("click", ()=> {
+                document.getElementById("dialogueText").innerText="I see... Good luck to finding love in the future";
+                document.getElementById("dateImg").src="./img/anna_reject.jpeg"
+                document.getElementById("proposalAccept").disabled= true;
+                document.getElementById("proposalDecline").innerText= true;
+                let modal = document.getElementById("modal");
+                setTimeout(()=>{modal.style.display = "black";}, 1000)
+            })
+        </script>
+    </body>
+</html>
